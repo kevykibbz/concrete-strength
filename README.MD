@@ -64,3 +64,7 @@ Follow the steps mentioned in the [Heroku Deployment Section](#heroku-deployment
 ## Contributing
 
 Feel free to contribute to this project. Create a fork, make your changes, and submit a pull request.
+
+
+## Demo
+visit: https://concrete-strength-hub-554468d56977.herokuapp.com/ for application preview.
