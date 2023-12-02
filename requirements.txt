@@ -1,0 +1,4 @@
+gunicorn
+python-dotenv
+flask
+psycopg2

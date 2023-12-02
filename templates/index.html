@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Concrete Strength Hub</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, follow" />
+    <!-- External CSS libraries -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'vendor/bootstrap/css/bootstrap.min.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'fonts/font-awesome-4.7.0/css/font-awesome.min.css') }}" />
+  </head>
+
+  <body>
+    <div class="limiter">
+      <div class="container">
+        <div class="wrap-table100">
+          <div class="table100 ver5 m-b-110">
+            <h3 class="text-center">Concrete Strength</h3>
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Cement</th>
+                  <th scope="col">Slag</th>
+                  <th scope="col">Flyash</th>
+                  <th scope="col">Water</th>
+                  <th scope="col">Superplasticizer</th>
+                  <th scope="col">Coarseaggregate</th>
+                  <th scope="col">Fineaggregate</th>
+                  <th scope="col">Age</th>
+                  <th scope="col">Csmpa</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for record in records %}
+                  <tr scope="row">
+                    <td class="cell100 column1">{{ record[0] }}</td>
+                    <td class="cell100 column1">{{ record[1] }}</td>
+                    <td class="cell100 column2">{{ record[2] }}</td>
+                    <td class="cell100 column3">{{ record[3] }}</td>
+                    <td class="cell100 column4">{{ record[4] }}</td>
+                    <td class="cell100 column5">{{ record[5] }}</td>
+                    <td class="cell100 column7">{{ record[6] }}</td>
+                    <td class="cell100 column8">{{ record[7] }}</td>
+                    <td class="cell100 column9">{{ record[8] }}</td>
+                    <td class="cell100 column9">{{ record[9] }}</td>
+                  </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="{{ url_for('static', filename = 'vendor/jquery/jquery-3.2.1.min.js') }}"></script>
+    <script src="{{ url_for('static', filename = 'vendor/bootstrap/js/popper.js') }}"></script>
+    <script src="{{ url_for('static', filename = 'vendor/bootstrap/js/bootstrap.min.js') }}"></script>
+  </body>
+</html>
